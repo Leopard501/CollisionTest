@@ -6,6 +6,7 @@ import processing.core.PVector;
 public class Entity {
 
     private final PApplet P;
+    private final Hitbox HITBOX;
 
     private PVector position;
     private PVector velocity;
@@ -18,6 +19,8 @@ public class Entity {
         P = p;
         this.position = position;
         this.velocity = velocity;
+
+        HITBOX = new Hitbox(P, this);
     }
 
     public void randomizePosition(PVector topLeftCorner, PVector bottomRightCorner) {
