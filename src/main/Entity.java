@@ -20,7 +20,7 @@ public class Entity {
         this.position = position;
         this.velocity = velocity;
 
-        HITBOX = new Hitbox(P, this);
+        HITBOX = new Hitbox(P, this, new PVector(25, 25));
     }
 
     public void randomizePosition(PVector topLeftCorner, PVector bottomRightCorner) {
